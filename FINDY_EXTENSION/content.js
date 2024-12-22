@@ -69,7 +69,7 @@ function insertProgramAboveVideoList() {
                 </div>
                 <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; text-align: center;">
                     <p style="font-size: 12px; color: #999; margin: 0 0 10px;">해당 장소를 저장해보세요.</p>
-                    <button id="naver-button" style="
+                    <button id="findy-button" style="
                         width: 100%; 
                         padding: 10px 15px; 
                         font-size: 16px; 
@@ -129,9 +129,9 @@ function insertProgramAboveVideoList() {
             videoListContainer.parentNode.insertBefore(customPanel, videoListContainer);
 
             // 버튼 클릭 이벤트 추가
-            const naverButton = customPanel.querySelector('#naver-button');
-            naverButton.addEventListener('click', () => {
-                window.open('https://www.naver.com', '_blank'); // 네이버 새 탭 열기
+            const findyButton = customPanel.querySelector('#findy-button');
+            findyButton.addEventListener('click', () => {
+                window.open('https://www.findynow.com', '_blank'); // 네이버 새 탭 열기
             });
 
             // API 호출
