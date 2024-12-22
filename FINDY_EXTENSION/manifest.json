@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Findy, 순간을 찾아 연결하다.",
+  "version": "1.1.0",
+  "description": "유튜브 영상 속 장소를 추출하여 저장하고, 장소의 카테고리별로 쉽게 지도에서 확인할 수 있는 서비스입니다.",
+  "permissions": [
+      "activeTab"
+  ],
+  "action": {
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+  "host_permissions": [
+      "https://data.findynow.com/*"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://www.youtube.com/*"],
+          "js": ["content.js"]
+      }
+  ],
+  "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+}
